@@ -1,2 +1,0 @@
-# resumeLozStyle
-Interactive Resume
