@@ -1,0 +1,22 @@
+body {
+    background-color: #1a1a1a;
+    color: #fdf6e3;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .start-btn {
+    display: inline-block;
+    background-color: #228B22;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+  }
