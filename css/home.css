@@ -6,3 +6,9 @@
     font-size: 24px;
     margin-bottom: 10px;
   }
+
+  .title-screen img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
