@@ -1,14 +1,36 @@
-.title-screen {
-    margin-top: 20%;
-  }
-  
-  .title-screen h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+main {
+  text-align: center;
+  max-width: 800px;
+}
 
-  .title-screen img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-  }
+.title-screen {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid #f5bfd7;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #f5bfd7;
+}
+
+.title-screen h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fdf6e3;
+}
+
+.title-screen img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.start-btn {
+  display: inline-block;
+  background-color: #228B22;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}

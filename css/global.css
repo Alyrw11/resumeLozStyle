@@ -1,22 +1,42 @@
 body {
-    background-color: #1a1a1a;
-    color: #fdf6e3;
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  background-color: #1a1a1a;
+  color: #fdf6e3;
+  font-family: 'HyliaSerif', cursive;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+  
+a {
+  color: #fff;
+  text-decoration: none;
+}
+  
+.start-btn {
+  display: inline-block;
+  background-color: #228B22;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+@font-face {
+  font-family: 'HyliaSerif';
+  src: url('/fonts/HyliaSerifBeta-Regular.otf') format('opentype');
+}
+  
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'HyliaSerif', cursive;
   }
   
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .start-btn {
-    display: inline-block;
-    background-color: #228B22;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 2px solid #fff;
-  }
