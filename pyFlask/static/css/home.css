@@ -59,3 +59,29 @@ header img {
   display: flex;
   justify-content: flex-end;
 }
+
+#destinationInput {
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'HyliaSerif', cursive;
+  width: 60%;
+  text-align: center;
+  border: 2px solid #f5bfd7;
+  border-radius: 8px;
+  margin-top: 15px;
+  background-color: #060740;
+  color: #fdf6e3;
+}
+
+#carouselText {
+  font-size: 18px;
+  font-style: italic;
+  color: #f5bfd7;
+  margin-top: 15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
