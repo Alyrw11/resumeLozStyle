@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Resume of Allison R. Wright, a software engineer with expertise in web development, data analysis, and machine learning.">
     <title>Allison R. Wright | Resume</title>
-    <link rel="stylesheet" href="/static/css/global.css">
-    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/pyFlask/static/css/global.css">
+    <link rel="stylesheet" href="/pyFlask/static/css/home.css">
 </head>
 <body>
   <div id="headerPlaceholder"></div>
-  <script src="/static/js/header.js"></script>0
-
+  <!--<script src="/pyFlask/static/js/header.js"></script>-->
+  <div class="background-slideshow">
+    <img src="/static/images/bg1.jpg" alt="Background 1">
+    <img src="/static/images/bg2.jpg" alt="Background 2">
+    <img src="/static/images/bg3.jpg" alt="Background 3">
+  </div>
+  
   <main>
     <div class="title-screen">
+      <h1>Welcome to Allison's Breath of the Résume</h1>
       <p>Enter your destination below or watch the carousel for clues...</p>
       <input type="text" id="destinationInput" placeholder="Type a section...">
       <div id="carouselText" style="margin: 1em 0; font-style: italic;"></div>
@@ -21,6 +27,7 @@
       <p>It's dangerous to go alone! Make sure you pick items along the way!</p>
     </div>
   </main>
-  <script src="/static/js/adventure.js"></script>
+  <script src="/pyFlask/static/js/adventure.js"></script>
+  <div id="triforceProgress"></div>
 </body>
 </html>

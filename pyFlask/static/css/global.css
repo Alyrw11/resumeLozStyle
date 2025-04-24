@@ -27,7 +27,7 @@ a {
 
 @font-face {
   font-family: 'HyliaSerif';
-  src: url('/fonts/HyliaSerifBeta-Regular.otf') format('opentype');
+  src: url('/pyFlask/static/fonts/HyliaSerifBeta-Regular.otf') format('opentype');
 }
   
 body, html {
@@ -70,5 +70,18 @@ nav a {
 nav a:hover {
   background-color: #f5bfd7;
   color: #060740;
+}
+
+#destinationInput {
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'HyliaSerif', cursive;
+  width: 60%;
+  text-align: center;
+  border: 2px solid #f5bfd7;
+  border-radius: 8px;
+  margin-top: 15px;
+  background-color: #060740;
+  color: #fdf6e3;
 }
   

@@ -1,0 +1,42 @@
+.triforce {
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 20px auto;
+  }
+  
+  .triforce::before,
+  .triforce::after,
+  .triforce div {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid #f5bfd7;
+    animation: triforceGlow 2s infinite alternate;
+  }
+  
+  .triforce::before {
+    transform: translate(-40px, 0);
+  }
+  
+  .triforce::after {
+    transform: translate(40px, 0);
+  }
+  
+  .triforce div {
+    top: -60px;
+    left: 0;
+  }
+  
+  @keyframes triforceGlow {
+    0% {
+      filter: drop-shadow(0 0 5px #f5bfd7);
+    }
+    100% {
+      filter: drop-shadow(0 0 15px #f5bfd7);
+    }
+  }
+  
