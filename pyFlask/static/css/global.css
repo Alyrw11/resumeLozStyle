@@ -36,7 +36,20 @@ a {
   color: #fdf6e3;
 }
 
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #fdf6e3;
+    margin: 100, 0, 0, 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+footer img {
+    width: 30px;
+    height: 30px;
+}
 /*possible colors
 35b4b3
 a6eceb
