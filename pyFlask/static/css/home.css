@@ -24,8 +24,9 @@ main {
 }
 
 .title-screen p {
-  color: #3575a7;
+  color: #fffaf7;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 10px #3ebfc2, 0 0 20px #3ebfc2;
 }
 
 .title-screen img {
