@@ -1,17 +1,8 @@
+/* Mobile devices (iPhone, small screens) */
 @media (max-width: 600px) {
-  body {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .title-screen {
+  .titleScreen {
     width: 90%;
     padding: 1rem;
-  }
-
-  .start-btn {
-    font-size: 14px;
-    padding: 10px 16px;
   }
 
   #destinationInput {
@@ -19,19 +10,28 @@
     font-size: 14px;
   }
 
-  .job-card {
+  .startBtn {
     font-size: 14px;
+    padding: 10px 16px;
   }
 }
 
-/* Tablets (up to 900px wide) */
+/* Tablet devices (iPads, larger phones) */
 @media (max-width: 900px) {
-  .title-screen {
+  .titleScreen {
     width: 80%;
   }
 
-  .job-card {
+  .jobCard {
     padding: 1rem;
+  }
+}
+
+/* Desktop devices (standard view) */
+@media (min-width: 901px) {
+  .titleScreen {
+    width: 60%;
+    max-width: 600px;
   }
 }
 
@@ -43,13 +43,12 @@ body html {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
 }
-  
+
 a {
   color: #fff;
   text-decoration: none;
@@ -95,4 +94,3 @@ footer img {
 35b4b3
 a6eceb
 #7fd2d8; possible winner for button colors.
-*/

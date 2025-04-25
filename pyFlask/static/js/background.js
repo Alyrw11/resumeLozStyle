@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll('.background-slideshow img');
+    const slides = document.querySelectorAll('.backShow img');
     let current = 0;
   
     if (slides.length > 0) {

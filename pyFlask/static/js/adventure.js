@@ -47,7 +47,7 @@ const displayNames = {
         const themeName = themedNames[val];
         container.innerHTML = `
           <p>You have chosen to go: <strong>${themeName}</strong></p>
-          <a href="${pages[val]}" class="start-btn">Enter ${themeName}</a>
+          <a href="${pages[val]}" class="startBtn">Enter ${themeName}</a>
           <div class="triforce"><div></div></div>
         `;
       } else {

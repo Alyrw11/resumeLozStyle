@@ -1,51 +1,41 @@
-@media (max-width: 600px) {
-  .title-screen {
-    width: 90%;
-    padding: 1rem;
-  }
-}
-
 main {
   text-align: center;
   max-width: 800px;
 }
 
-.title-screen {
+.titleScreen {
   position: relative;
-  max-width: 90%;
-  width: 600px;
+  top: 100px;
+  left: 300px;
   margin: auto;
   padding: 2rem;
+  font-family: 'hyliaSerif', cursive;
   border-radius: 15px;
-  border: 2px solid #7fd2d8;
-  box-shadow: 0 0 25px #7fd2d8;
-  font-family: 'HyliaSerif', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
-.title-screen h1 {
+.titleScreen h1 {
   font-size: 40px;
   margin-bottom: 10px;
   color: #baa065;
 }
 
-.title-screen p {
+.titleScreen p {
   color: #fffaf7;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-shadow: 0 0 10px #3ebfc2, 0 0 20px #3ebfc2;
 }
 
-.title-screen img {
+.titleScreen img {
   width: 150px;
   height: 150px;
   margin-bottom: 20px;
 }
 
-.start-btn {
+.startBtn {
   display: inline-block;
   background-color: #7fd2d8;
   padding: 10px 20px;
@@ -91,7 +81,7 @@ main {
   background-color: #944970;
 }
 
-.background-slideshow {
+.backShow {
   position: fixed;
   top: 0;
   left: 0;
@@ -101,7 +91,7 @@ main {
   overflow: hidden;
 }
 
-.background-slideshow img {
+.backShow img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -110,6 +100,6 @@ main {
   transition: opacity 2s ease-in-out;
 }
 
-.background-slideshow img.active {
+.backShow img.active {
   opacity: 1;
 }
