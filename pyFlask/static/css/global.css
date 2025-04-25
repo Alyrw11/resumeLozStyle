@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'HyliaSerif';
+  src: url('/pyFlask/static/fonts/HyliaSerifBeta-Regular.otf') format('opentype');
+}
+
 /* Mobile devices (iPhone, small screens) */
 @media (max-width: 600px) {
   .titleScreen {
@@ -54,11 +59,6 @@ a {
   text-decoration: none;
 }
 
-
-@font-face {
-  font-family: 'HyliaSerif';
-  src: url('/pyFlask/static/fonts/HyliaSerifBeta-Regular.otf') format('opentype');
-}
 
 #destinationInput {
   padding: 10px;
