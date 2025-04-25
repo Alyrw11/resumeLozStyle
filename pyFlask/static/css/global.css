@@ -1,4 +1,4 @@
-body {
+body html {
   background-color: #1a1a1a;
   color: #fdf6e3;
   font-family: 'HyliaSerif', cursive;
@@ -9,67 +9,18 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
   
 a {
   color: #fff;
   text-decoration: none;
 }
-  
-.start-btn {
-  display: inline-block;
-  background-color: #228B22;
-  padding: 10px 20px;
-  margin-top: 20px;
-  border-radius: 5px;
-  border: 2px solid #fff;
-}
+
 
 @font-face {
   font-family: 'HyliaSerif';
   src: url('/pyFlask/static/fonts/HyliaSerifBeta-Regular.otf') format('opentype');
-}
-  
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'HyliaSerif', cursive;
-  }
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.4); /* Optional: semi-transparent bar */
-  border-bottom: 2px solid #f5bfd7;
-}
-  
-nav img {
-  height: 40px;
-  margin-right: 15px;
-}
-  
-nav a {
-  color: #fdf6e3;
-  font-family: 'HyliaSerif', cursive;
-  font-size: 14px;
-  text-decoration: none;
-  border: 1px solid #f5bfd7;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background-color: #060740;
-  transition: background 0.3s;
-}
-  
-nav a:hover {
-  background-color: #f5bfd7;
-  color: #060740;
 }
 
 #destinationInput {
@@ -78,10 +29,16 @@ nav a:hover {
   font-family: 'HyliaSerif', cursive;
   width: 60%;
   text-align: center;
-  border: 2px solid #f5bfd7;
+  border: 2px solid #96c8eb;
   border-radius: 8px;
   margin-top: 15px;
-  background-color: #060740;
+  background-color: #3193ee;
   color: #fdf6e3;
 }
-  
+
+
+/*possible colors
+35b4b3
+a6eceb
+#7fd2d8; possible winner for button colors.
+*/

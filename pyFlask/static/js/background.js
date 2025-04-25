@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slides[current].classList.remove('active');
         current = (current + 1) % slides.length;
         slides[current].classList.add('active');
-      }, 6000); // 6 seconds per image
+      }, 15000); // 30 seconds per image
     }
   });
   

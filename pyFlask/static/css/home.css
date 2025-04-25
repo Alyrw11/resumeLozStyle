@@ -4,17 +4,28 @@ main {
 }
 
 .title-screen {
+  position: relative;
+  top: 100px;
+  left: 700px;
+  margin: auto;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.6);
-  border: 3px solid #f5bfd7;
+  font-family: 'hyliaSerif', cursive;
   border-radius: 15px;
-  box-shadow: 0 0 30px #f5bfd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .title-screen h1 {
-  font-size: 24px;
+  font-size: 40px;
   margin-bottom: 10px;
-  color: #fdf6e3;
+  color: #baa065;
+}
+
+.title-screen p {
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .title-screen img {
@@ -25,7 +36,7 @@ main {
 
 .start-btn {
   display: inline-block;
-  background-color: #228B22;
+  background-color: #7fd2d8;
   padding: 10px 20px;
   margin-top: 20px;
   border-radius: 5px;
@@ -35,48 +46,24 @@ main {
   font-size: 14px;
 }
 
-header {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 5px;
-  background-color: var(--primary-color);
-}
-
-header img {
-  width: 50px;
-  height: 50px;
-}
-
-.headerGrid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  
-}
-
-.headerGrid nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
 #destinationInput {
   padding: 10px;
   font-size: 16px;
   font-family: 'HyliaSerif', cursive;
   width: 60%;
   text-align: center;
-  border: 2px solid #f5bfd7;
+  border: 2px solid #fce4dc;
   border-radius: 8px;
   margin-top: 15px;
-  background-color: #060740;
-  color: #fdf6e3;
+  background-color: #f9bcbc;
+  color: #fffaf7;
 }
 
 #carouselText {
   font-size: 18px;
   font-style: italic;
-  color: #f5bfd7;
+  color: #3575a7;
+  text-shadow: 0 0 30px #3575a7;
   margin-top: 15px;
   animation: pulse 2s infinite;
 }
@@ -88,6 +75,30 @@ header img {
 
 #destinationInput:focus {
   outline: none;
-  box-shadow: 0 0 10px #f5bfd7, 0 0 20px #f5bfd7;
-  background-color: #100c30;
+  color:#dd6e83;
+  box-shadow: 0 0 10px #f9bcbc, 0 0 20px #facbdf;
+  background-color: #944970;
+}
+
+.background-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.background-slideshow img.active {
+  opacity: 1;
 }
