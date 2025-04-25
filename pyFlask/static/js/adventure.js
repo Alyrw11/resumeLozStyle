@@ -3,15 +3,17 @@ const displayNames = {
     "skills": "Skills & Attributes",
     "education": "Education & Certifications",
     "languages": "Languages",
-    "hobbies": "Hobbies & Interests"
+    "hobbies": "Hobbies & Interests",
+    "contact": "Contact Information",
   };
   
   const themedNames = {
-    "work": "Temple of Work History",
-    "skills": "Dungeon of Skills",
-    "education": "Shrine of Knowledge",
-    "languages": "Tower of Tongues",
-    "hobbies": "Forest of Fun"
+    "work": "Temple of Career Experience",
+    "skills": "Skill Canyon",
+    "education": "Knowledge Domain",
+    "languages": "Tongues Valley",
+    "hobbies": "Hobbie Village",
+    "contact": "Wright Castle",
   };
   
   const pages = {
@@ -19,7 +21,8 @@ const displayNames = {
     "skills": "static/html/skills.html",
     "education": "static/html/edCerts.html",
     "languages": "static/html/languages.html",
-    "hobbies": "static/html/hobbies.html"
+    "hobbies": "static/html/hobbies.html",
+    "contact": "static/html/contact.html",
   };
   
   let keys = Object.keys(displayNames);
