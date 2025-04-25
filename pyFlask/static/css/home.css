@@ -1,3 +1,10 @@
+@media (max-width: 600px) {
+  .title-screen {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
 main {
   text-align: center;
   max-width: 800px;
@@ -5,16 +12,19 @@ main {
 
 .title-screen {
   position: relative;
-  top: 100px;
-  left: 300px;
+  max-width: 90%;
+  width: 600px;
   margin: auto;
   padding: 2rem;
-  font-family: 'hyliaSerif', cursive;
   border-radius: 15px;
+  border: 2px solid #7fd2d8;
+  box-shadow: 0 0 25px #7fd2d8;
+  font-family: 'HyliaSerif', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .title-screen h1 {
