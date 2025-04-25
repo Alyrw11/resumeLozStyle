@@ -37,18 +37,19 @@ a {
 }
 
 footer {
-    text-align: center;
-    padding: 15px;
-    color: #fdf6e3;
-    margin: 100, 0, 0, 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 100, 0, 0, 0;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 footer img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 /*possible colors
 35b4b3
