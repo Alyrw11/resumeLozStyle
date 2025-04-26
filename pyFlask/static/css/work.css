@@ -1,0 +1,92 @@
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .jobCard {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #7fd2d8;
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #fdf6e3;
+    box-shadow: 0 0 10px #7fd2d8;
+    transition: transform 0.3s ease;
+  }
+  
+  .jobCard:hover {
+    transform: scale(1.02);
+  }
+  
+  .jobLogo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .jobMeta {
+    font-size: 0.9rem;
+    color: #a6eceb;
+  }
+  
+  .jobSummary {
+    margin: 0.5rem 0;
+  }
+  
+  .expandBtn {
+    background-color: #7fd2d8;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'HyliaSerif', cursive;
+  }
+  
+  .jobDetails {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .jobCard.expanded .jobDetails {
+    display: block;
+  }
+  
+  .bossBtn {
+    margin-top: 2rem;
+    background-color: #3193ee;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'HyliaSerif', cursive;
+    cursor: pointer;
+  }
+  
+  /* Boss Modal */
+  .modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: #1a1a1a;
+    padding: 2rem;
+    border: 2px solid #f5bfd7;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px #f5bfd7;
+    color: #fdf6e3;
+  }
+  

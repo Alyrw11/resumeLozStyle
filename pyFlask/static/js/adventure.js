@@ -17,7 +17,7 @@ const displayNames = {
   };
   
   const pages = {
-    "work": "static/html/work.html",
+    "work": "pyFlask/static/html/work.html",
     "skills": "static/html/skills.html",
     "education": "static/html/edCerts.html",
     "languages": "static/html/languages.html",
