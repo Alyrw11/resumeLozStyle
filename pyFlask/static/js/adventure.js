@@ -17,12 +17,12 @@ const displayNames = {
   };
   
   const pages = {
-    "work": "pyFlask/templates/work.html",
-    "skills": "pyFlask/templates/skills.html",
-    "education": "pyFlask/templates/edCert.html",
-    "languages": "pyFlask/templates/languages.html",
-    "hobbies": "pyFlask/templates/hobbies.html",
-    "contact": "pyFlask/templates/contact.html",
+    "work": "/work",
+    "skills": "/skills",
+    "education": "/edCerts",
+    "languages": "/languages",
+    "hobbies": "/hobbies",
+    "contact": "/contact",
   };
   
   let keys = Object.keys(displayNames);

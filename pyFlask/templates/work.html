@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="/pyFlask/static/css/work.css" />
 </head>
 <body>
+  <img src="" alt="">
   <div class="work-grid">
       <!-- Job 1 -->
     <div class="jobCard">
-        <img src="/images/ttec-logo.png" alt="TTEC Logo" class="jobLogo" />
+        <img src="/pyFlask/static/images/ttecDigital.png" alt="TTEC Logo" class="jobLogo" />
         <h3>Developer, System Software</h3>
         <p class="jobMeta">TTEC Digital - 2022–2024</p>
         <p class="jobSummary">Led Amazon Connect deployments, AWS automations, and IVR integrations.</p>
@@ -26,7 +27,7 @@
     </div>
       <!-- Job 2 -->
     <div class="jobCard">
-        <img src="/images/ttec-logo.png" alt="TTEC Logo" class="jobLogo" />
+        <img src="/pyFlask/static/images/ttecDigital.png" alt="TTEC Logo" class="jobLogo" />
         <h3>Technical Account Manager</h3>
         <p class="jobMeta">TTEC Digital - 2021–2022</p>
         <p class="jobSummary">Managed enterprise client adoption of Amazon Connect and Salesforce integration.</p>
@@ -41,7 +42,7 @@
     </div>
       <!-- Job 3 -->
     <div class="jobCard">
-        <img src="/images/nice-logo.png" alt="NICE Logo" class="jobLogo" />
+        <img src="/pyFlask/static/images/incontact.png" alt="NICE Logo" class="jobLogo" />
         <h3>Project Manager</h3>
         <p class="jobMeta">NICE InContact - 2019–2020</p>
         <p class="jobSummary">Oversaw Salesforce migrations and cloud deployment projects.</p>
@@ -56,7 +57,7 @@
     </div>
       <!-- Job 4 -->
     <div class="jobCard">
-        <img src="/images/verizon-logo.png" alt="Verizon Logo" class="jobLogo" />
+        <img src="/pyFlask/static/images/vzw.png" alt="Verizon Logo" class="jobLogo" />
         <h3>Global Enterprise Advisor/Manager</h3>
         <p class="jobMeta">Verizon Wireless - 2013–2019</p>
         <p class="jobSummary">Managed enterprise client portfolios and resolved escalated issues.</p>
@@ -69,12 +70,26 @@
           </ul>
         </div>
     </div>
+      <!-- Job 5 -->
+    <div class="jobCard">
+        <img src="/pyFlask/static/images/vzw.png" alt="VZW Logo" class="jobLogo" />
+        <h3>Customer Service Representative</h3>
+        <p class="jobMeta">Verizon - 2008–2013</p>
+        <p class="jobSummary">Managed global accounts and provided technical support.</p>
+        <button class="expandBtn" onclick="toggleDetails(this)">More Details</button>
+        <div class="jobDetails">
+          <ul>
+            <li>Provided technical support and account management.</li>
+            <li>Resolved escalated issues and ensured client satisfaction.</li>
+            <li>Delivered training and support for enterprise clients.</li>
+          </ul>
+        </div>
   </div>
   <!-- Quest Button -->
   <button class="bossBtn" onclick="triggerBossFight('work')">Continue Your Quest</button>
 
   <!-- Boss Modal -->
-  <div id="bossModal" class="modal hidden">
+  <div id="miniBoss" class="miniBoss hidden">
     <div class="modal-content">
       <h2>💀 A Mini Boss Appears!</h2>
       <p>Defeat the boss to continue your journey...</p>
@@ -83,7 +98,7 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="/js/gameCompletion.js"></script>
+  <script src="/pyFlask/static/js/gameCompletion.js"></script>
   <script src="/pyFlask/static/js/background.js"></script>
 </body>
 </html>

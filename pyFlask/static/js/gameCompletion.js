@@ -13,12 +13,12 @@ function toggleDetails(button) {
 }
 
 function triggerBossFight(currentPage) {
-  document.getElementById("bossModal").classList.remove("hidden");
-  document.getElementById("bossModal").dataset.page = currentPage;
+  document.getElementById("miniBoss").classList.remove("hidden");
+  document.getElementById("miniBoss").dataset.page = currentPage;
 }
 
 function defeatBoss() {
-  const page = document.getElementById("bossModal").dataset.page;
+  const page = document.getElementById("miniBoss").dataset.page;
 
   if (!progress.visited.includes(page)) {
     progress.visited.push(page);
@@ -40,7 +40,7 @@ function defeatBoss() {
     localStorage.setItem("zeldaProgress", JSON.stringify(progress));
   }
 
-  document.getElementById("bossModal").classList.add("hidden");
+  document.getElementById("miniBoss").classList.add("hidden");
   chooseNextPage();
 }
 

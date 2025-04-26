@@ -63,8 +63,8 @@
     cursor: pointer;
   }
   
-  /* Boss Modal */
-  .modal {
+  /* miniBoss Model */
+  .miniBoss {
     position: fixed;
     top: 0; left: 0;
     width: 100vw;
@@ -76,11 +76,11 @@
     z-index: 9999;
   }
   
-  .modal.hidden {
+  .miniBoss.hidden {
     display: none;
   }
   
-  .modal-content {
+  .miniBossContent {
     background: #1a1a1a;
     padding: 2rem;
     border: 2px solid #f5bfd7;
