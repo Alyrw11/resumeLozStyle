@@ -1,0 +1,20 @@
+<!-- call out to boss fight -->
+<div id="bossBackdrop" class="hidden"></div>
+
+<div id="miniBoss" class="hidden">
+  <h2 id="bossName"></h2>
+  <img id="bossImage" src="" alt="Boss Image" width="200">
+  <div id="criticalText" class="hidden">Critical Hit!</div>
+  <p id="bossDesc"></p>
+
+  <div id="battleStats">
+    <p>🧙‍♂️ Your HP: <span id="playerHP">100</span></p>
+    <p>👹 Boss HP: <span id="bossHP">100</span></p>
+  </div>
+
+  <div id="battleActions">
+    <button onclick="playerAttack()">Attack ⚔️</button>
+    <button onclick="playerDodge()">Dodge 🛡️</button>
+    <button onclick="playerHeal()">Heal 🍖</button>
+  </div>
+</div>

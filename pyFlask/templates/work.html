@@ -90,15 +90,11 @@
   <button class="bossBtn" onclick="triggerBossFight('work')">Continue Your Quest</button>
 
   <!-- Boss Modal -->
-  <div id="miniBoss" class="miniBoss hidden">
-    <div class="modal-content">
-      <h2>💀 A Mini Boss Appears!</h2>
-      <p>Defeat the boss to continue your journey...</p>
-      <button onclick="defeatBoss()">Attack!</button>
-    </div>
-  </div>
+  <div id="bossContainer"></div>
 
   <!-- JavaScript -->
+  <script src="/pyFlask/static/js/bosses.js"></script>
+  <script src="/pyFlask/static/js/bossFight.js"></script>
   <script src="/pyFlask/static/js/gameCompletion.js"></script>
   <script src="/pyFlask/static/js/background.js"></script>
 </body>

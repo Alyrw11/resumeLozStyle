@@ -63,30 +63,3 @@
     cursor: pointer;
   }
   
-  /* miniBoss Model */
-  .miniBoss {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .miniBoss.hidden {
-    display: none;
-  }
-  
-  .miniBossContent {
-    background: #1a1a1a;
-    padding: 2rem;
-    border: 2px solid #f5bfd7;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 0 15px #f5bfd7;
-    color: #fdf6e3;
-  }
-  

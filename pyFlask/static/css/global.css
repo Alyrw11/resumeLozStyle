@@ -90,6 +90,99 @@ footer img {
   width: 30px;
   height: 30px;
 }
+
+.hidden {
+  display: none;
+}
+
+#miniBoss {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  color: #fdf6e3;
+  border: 3px solid #f5bfd7;
+  padding: 30px;
+  border-radius: 20px;
+  z-index: 9999;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px #f5bfd7;
+  text-align: center;
+}
+
+#battleActions button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Floating Critical Text */
+#criticalText {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-family: 'Press Start 2P', cursive;
+  color: #ff4444;
+  text-shadow: 2px 2px 4px #000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 20;
+}
+
+.float-crit {
+  animation: floatCrit 1s ease-out forwards;
+}
+
+@keyframes floatCrit {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -100%) scale(1.2); }
+  100% { opacity: 0; transform: translate(-50%, -150%) scale(1.5); }
+}
+
+/* Critical Hit Screen Shake */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.critical-hit {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+/* Dark Backdrop for Final Boss */
+#bossBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.95) 100%);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 1s ease;
+}
+
+#bossBackdrop.active {
+  opacity: 1;
+}
+
 /*possible colors
 35b4b3
 a6eceb
