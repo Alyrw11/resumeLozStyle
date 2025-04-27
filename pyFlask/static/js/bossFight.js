@@ -1,12 +1,17 @@
-
 window.addEventListener('DOMContentLoaded', () => {
-  fetch('/pyFlask/templates/bosses.html') // <<< make sure this path matches where bosses.html is located
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('bossContainer').innerHTML = html;
-    })
-    .catch(error => {
-      console.error('Error loading boss modal:', error);
-    });
-});
+  if (typeof miniBosses !== 'undefined') {
+    console.log('Mini Bosses loaded:', miniBosses);
 
+    // Create bossContainer if needed (this is optional, assuming HTML already has it)
+    const bossContainer = document.getElementById('bossContainer');
+    if (!bossContainer) {
+      const container = document.createElement('div');
+      container.id = 'bossContainer';
+      document.body.appendChild(container);
+    }
+
+    // Optionally you can pre-load anything visual here if needed
+  } else {
+    console.error('MiniBosses not loaded!');
+  }
+});
