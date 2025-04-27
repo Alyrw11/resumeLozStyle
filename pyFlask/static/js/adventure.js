@@ -18,11 +18,11 @@ const displayNames = {
   
   const pages = {
     "work": "/pages/work.html",
-    "skills": "/pages/skills",
-    "education": "/pages/edCerts",
-    "languages": "/pages/languages",
-    "hobbies": "/pages/hobbies",
-    "contact": "/pages/contact",
+    "skills": "/pages/skills.html",
+    "education": "/pages/edCerts.html",
+    "languages": "/pages/languages.html",
+    "hobbies": "/pages/hobbies.html",
+    "contact": "/pages/contact.html",
   };
   
   let keys = Object.keys(displayNames);
