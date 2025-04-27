@@ -17,12 +17,12 @@ const displayNames = {
   };
   
   const pages = {
-    "work": "work.html",
-    "skills": "/pages/skills.html",
-    "education": "/pages/edCerts.html",
-    "languages": "/pages/languages.html",
-    "hobbies": "/pages/hobbies.html",
-    "contact": "/pages/contact.html",
+    "work": "/work.html",
+    "skills": "/skills.html",
+    "education": "/edCerts.html",
+    "languages": "/languages.html",
+    "hobbies": "/hobbies.html",
+    "contact": "/contact.html",
   };
   
   let keys = Object.keys(displayNames);
