@@ -17,7 +17,7 @@ const displayNames = {
   };
   
   const pages = {
-    "work": "/pages/work.html",
+    "work": "work.html",
     "skills": "/pages/skills.html",
     "education": "/pages/edCerts.html",
     "languages": "/pages/languages.html",
