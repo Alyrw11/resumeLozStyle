@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Resume of Allison R. Wright, a software engineer with expertise in web development, data analysis, and machine learning.">
-    <title>Allison R. Wright | Resume</title>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work History | Allison's Resume Quest</title>
+  <link rel="stylesheet" href="/pyFlask/static/css/global.css" />
+  <link rel="stylesheet" href="/pyFlask/static/css/education.css" />
 </head>
 <body>
-    <header>
-        <div>
-            <nav>
-                <img src="images/gpLogo.png" alt="Gaming Panda logo">
-                <a href="/html/home.html">Home</a>
-                <a href="/html/work.html">Work History</a>
-                <a href="/html/skills.html">skills</a>
-                <a href="/html/edCerts.html">Education and Certificates</a>
-                <a href="/html/languages.html">languages</a>
-                <a href="/html/hobbies.html">Hobbies</a>
-                <a href="/html/triforce.html">Final page</a>
-            </nav>
+  <img src="" alt="">
+  <div class="eduGrid">
+      <!-- Job 1 -->
+    <div class="eduCard">
+        <img src="/pyFlask/static/images/incontact.png" alt="NICE Logo" class="eduLogo"/>
+        <h3>Brigahm Young University - Idaho</h3>
+        <p class="eduMeta">Software Develorper 2024–Current</p>
+        <p class="eduSummary">Learning to be a software Developer</p>
+    </div>
+      <!-- Job 2 -->
+      <div class="eduCard">
+        <img src="/pyFlask/static/images/incontact.png" alt="NICE Logo" class="eduLogo"/>
+        <h3>University of Utah</h3>
+        <p class="eduMeta">Software Develorper 2024–Current</p>
+        <p class="eduSummary"></p>
+    </div>
+      <!-- Job 3 -->
+    <div class="eduCard">
+        <img src="/pyFlask/static/images/incontact.png" alt="NICE Logo" class="eduLogo"/>
+        <h3>Helio Training</h3>
+        <p class="eduMeta">Software Develorper 2024–Current</p>
+        <p class="eduSummary"></p>
+    </div>
+      <!-- Job 3 -->
+    <div class="eduCard">
+        <img src="/pyFlask/static/images/incontact.png" alt="NICE Logo" class="eduLogo" />
+        <h3>Certificates</h3>
+        <p>AWS Cloud Practitioner</p>
+        <p>Project Manager</p>
+        <p>Solutions Architecht</p>
         </div>
-    </header>
-    <div id="bossContainer"></div>
-    <!-- Quest Button -->
-    <button class="bossBtn" onclick="triggerBossFight('work')">Continue Your Quest</button>
-    <!-- JavaScript -->
-    <script src="/pyFlask/static/js/bosses.js"></script>
-    <script src="/pyFlask/static/js/bossFight.js"></script>
-    <script src="/pyFlask/static/js/gameCompletion.js"></script>
-    <script src="/pyFlask/static/js/background.js"></script>
+    </div>
+
+  <div id="bossContainer"></div>
+  <!-- Quest Button -->
+  <button class="bossBtn" onclick="triggerBossFight('edcerts')">Continue Your Quest</button>
+  <!-- JavaScript -->
+  <script src="/pyFlask/static/js/bosses.js"></script>
+  <script src="/pyFlask/static/js/bossFight.js"></script>
+  <script src="/pyFlask/static/js/gameCompletion.js"></script>
+  <script src="/pyFlask/static/js/background.js"></script>
+  <script src="/pyFlask/static/js/adventure.js"></script>
+
+  <!-- Next Page Selection -->
+
+  <div class="questContinue">
+    <div id="nextInputBox" class="hidden">
+      <div id="carouselText" style="margin: 1em 0; font-style: italic; color: #fdf6e3;"></div>
+      <p>Where would should you travel next</p>
+      <input type="text" id="destinationInput" placeholder="Type a section..." 
+           style="padding: 10px; width: 60%; max-width: 300px; font-family: 'Press Start 2P', cursive; border: 2px solid white; background-color: #333; color: #fdf6e3; text-align: center;">
+      <div id="pathBtnContainer"></div>
+    </div>
+  </div>
 </body>
 </html>

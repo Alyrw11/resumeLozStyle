@@ -5,33 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Resume of Allison R. Wright, a software engineer with expertise in web development, data analysis, and machine learning.">
     <title>Allison R. Wright | Resume</title>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/pyFlask/static/css/global.css" />
+    <link rel="stylesheet" href="/pyFlask/static/css/hobbies.css" />
 </head>
 <body>
-    <header>
-        <div>
-            <nav>
-                <img src="images/gpLogo.png" alt="Gaming Panda logo">
-                <a href="/html/home.html">Home</a>
-                <a href="/html/work.html">Work History</a>
-                <a href="/html/skills.html">skills</a>
-                <a href="/html/edCerts.html">Education and Certificates</a>
-                <a href="/html/languages.html">languages</a>
-                <a href="/html/hobbies.html">Hobbies</a>
-                <a href="/html/triforce.html">Final page</a>
-            </nav>
-        </div>
-    </header>
     <main>
-        <div id="bossContainer"></div>
-        <!-- Quest Button -->
-        <button class="bossBtn" onclick="triggerBossFight('work')">Continue Your Quest</button>
-        <!-- JavaScript -->
-        <script src="/pyFlask/static/js/bosses.js"></script>
-        <script src="/pyFlask/static/js/bossFight.js"></script>
-        <script src="/pyFlask/static/js/gameCompletion.js"></script>
-        <script src="/pyFlask/static/js/background.js"></script>
+    <!-- Page Instructions -->
+        <div class="sideQuest2">
+            <h2>Side Quest</h2>
+            <p>Find the 12 Skill Seeds hidden around this page. Once you find them you will be able to continue with your quest. </p>
+        </div>
+
+    <!-- Hobbies list --> 
+    <div class="hobbyGrid">
+        <!-- Hobby 1 -->
+        <div class="hobbyCard">
+            <img src="/pyFlask/static/images/" alt="hobbie Logo" class="hobbyLogo" />
+            <h3>Book Translation</h3>
+            <p class="hobbyMeta">Book Translation</p>
+            <p class="hobbySummary">Why I like translating books</p>
+            <button class="expandBtn" onclick="toggleDetails(this)">More Details</button>
+            <div class="hobbhyDetails">
+                <ul>
+                    <li>Enhanced client satisfaction by delivering high-quality translations within tight deadlines.</li>
+                    <li>Streamlined translation processes for increased efficiency and reduced turnaround time.</li>
+                    <li>Improved readability of translated materials by employing advanced proofreading techniques and meticulous editing skills.</li>
+                    <li>Collaborated with fellow translators to ensure consistency in language usage and style across all documents.</li>
+                </ul>
+            </div>
+        </div>
+    <!-- Hobby 2 -->
+        <div class="streamsLinks">
+            <ul>
+                <li>Placeholder for Twitch Streams</li>
+                <li>show diff streams</li>
+            </ul>
+        </div>   
     </main>
+
+    <!-- Boss Fight Trigger -->
+    <div id="bossContainer"></div>
+
+    <!-- Quest Button -->
+    <button class="bossBtn" onclick="triggerBossFight('hobbies')">Continue Your Quest</button>
+    
+    <!-- JavaScript -->
+    <script src="/pyFlask/static/js/bosses.js"></script>
+    <script src="/pyFlask/static/js/bossFight.js"></script>
+    <script src="/pyFlask/static/js/gameCompletion.js"></script>
+    <script src="/pyFlask/static/js/background.js"></script>
+    <script src="/pyFlask/static/js/adventure.js"></script>
+
+    <!-- Next Page Selection -->
+    <div class="questContinue">
+        <div id="nextInputBox" class="hidden">
+        <div id="carouselText" style="margin: 1em 0; font-style: italic; color: #fdf6e3;"></div>
+        <p>Where would should you travel next</p>
+        <input type="text" id="destinationInput" placeholder="Type a section..." 
+            style="padding: 10px; width: 60%; max-width: 300px; font-family: 'Press Start 2P', cursive; border: 2px solid white; background-color: #333; color: #fdf6e3; text-align: center;">
+        <div id="pathBtnContainer"></div>
+        </div>
+    </div>
+
 </body>
 </html>

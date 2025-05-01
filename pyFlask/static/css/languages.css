@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('/pyFlask/static/images/gerudoValley.png') no-repeat center center fixed;
+    background-size: 100% 100%;
+    background-color: #000; /* Fallback for older browsers */
+  }
+  
+  .bossBtn {
+    margin-top: 2rem;
+    margin-left: 30px;
+    background-color: #255824;
+    color: #64b17a;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'HyliaSerif', cursive;
+    cursor: pointer;
+  }
+    .bossBtn:hover {
+        background-color: #64b17a;
+        color: #255824;
+        box-shadow: 0 0 10px #255824;
+    }

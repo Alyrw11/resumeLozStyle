@@ -73,3 +73,9 @@ body {
     font-family: 'HyliaSerif', cursive;
     cursor: pointer;
   }
+
+  .bossBtn:hover {
+    background-color: #fda41d;
+    color: #ea4601;
+    box-shadow: 0 0 10px #ea4601;
+}

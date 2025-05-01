@@ -5,34 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Resume of Allison R. Wright, a software engineer with expertise in web development, data analysis, and machine learning.">
     <title>Allison R. Wright | Resume</title>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/pyFlask/static/css/global.css" />
+    <link rel="stylesheet" href="/pyFlask/static/css/languages.css" />
 </head>
 <body>
-    <header>
-        <div>
-            <nav>
-                <img src="images/gpLogo.png" alt="Gaming Panda logo">
-                <a href="/html/home.html">Home</a>
-                <a href="/html/work.html">Work History</a>
-                <a href="/html/skills.html">skills</a>
-                <a href="/html/edCerts.html">Education and Certificates</a>
-                <a href="/html/languages.html">languages</a>
-                <a href="/html/hobbies.html">Hobbies</a>
-                <a href="/html/triforce.html">Final page</a>
-            </nav>
-        </div>
-    </header>
     <main>
-        
+    <!-- Page Instructions -->
+        <div class="sideQuest2">
+            <h2>Side Quest 2</h2>
+            <p>Find the 4 language heroines hidden around this page. Once you find them you will be able to continue with your quest. </p>
+        </div>
+
+    <!-- Skill list --> 
+        <div class="langList">
+            <ul>
+                <li>Spanish</li>
+                <li>English</li>
+                <li>French</li>
+                <li>Korean</li>
+            </ul>
+        </div>   
     </main>
+
+    <!-- Boss Fight Trigger -->
     <div id="bossContainer"></div>
+
     <!-- Quest Button -->
-    <button class="bossBtn" onclick="triggerBossFight('work')">Continue Your Quest</button>
+    <button class="bossBtn" onclick="triggerBossFight('languages')">Continue Your Quest</button>
+    
     <!-- JavaScript -->
     <script src="/pyFlask/static/js/bosses.js"></script>
     <script src="/pyFlask/static/js/bossFight.js"></script>
     <script src="/pyFlask/static/js/gameCompletion.js"></script>
     <script src="/pyFlask/static/js/background.js"></script>
+    <script src="/pyFlask/static/js/adventure.js"></script>
+
+    <!-- Next Page Selection -->
+    <div class="questContinue">
+        <div id="nextInputBox" class="hidden">
+        <div id="carouselText" style="margin: 1em 0; font-style: italic; color: #fdf6e3;"></div>
+        <p>Where would should you travel next</p>
+        <input type="text" id="destinationInput" placeholder="Type a section..." 
+            style="padding: 10px; width: 60%; max-width: 300px; font-family: 'Press Start 2P', cursive; border: 2px solid white; background-color: #333; color: #fdf6e3; text-align: center;">
+        <div id="pathBtnContainer"></div>
+        </div>
+    </div>
+
 </body>
 </html>

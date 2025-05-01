@@ -41,6 +41,7 @@ const inputSynonyms = {
 "tongues valley": "languages",
 "temple of languages": "languages",
 "leisure village": "pursuits",
+"hobbies": "pursuits",
 "hobbies & Interests": "pursuits",
 "hobbies AND Interests": "pursuits",
 "final trial": "contact",
