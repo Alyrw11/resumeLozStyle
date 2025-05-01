@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('/pyFlask/static/images/dmDay.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000; /* Fallback for older browsers */
+}
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -6,12 +15,12 @@
   }
   
   .jobCard {
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid #7fd2d8;
+    background-color: #6e3810 (0, 0 , 0, .8);
+    border: 2px solid #a33006;
     border-radius: 12px;
     padding: 1.5rem;
-    color: #fdf6e3;
-    box-shadow: 0 0 10px #7fd2d8;
+    color: #f5ad1f;
+    box-shadow: 0 0 10px #ff6a00;
     transition: transform 0.3s ease;
   }
   
@@ -26,7 +35,7 @@
   
   .jobMeta {
     font-size: 0.9rem;
-    color: #a6eceb;
+    color: #eb7d0f;
   }
   
   .jobSummary {
@@ -34,7 +43,8 @@
   }
   
   .expandBtn {
-    background-color: #7fd2d8;
+    background-color: #872e07;
+    color: #eb7d0f;
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
@@ -54,8 +64,8 @@
   
   .bossBtn {
     margin-top: 2rem;
-    background-color: #3193ee;
-    color: #fff;
+    background-color: #ea4601;
+    color: #fda41d;
     padding: 12px 20px;
     border: none;
     border-radius: 10px;
