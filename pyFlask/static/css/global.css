@@ -188,6 +188,51 @@ footer img {
   text-align: center; 
   margin-top: 2em;
 }
+
+.questContinue {
+  position: relative;
+  top: 100px;
+  left: 300px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'hyliaSerif', cursive;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.questContinue h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #e7e594;
+  text-shadow: 0 0 10px #cec067, 0 0 20px #d7d66f;
+}
+
+.questContinue p {
+  color: #fffaf7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 20px #3ebfc2, 0 0 30px #3ebfc2;
+}
+
+.questContinue img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.startBtn {
+  display: inline-block;
+  background-color: #7fd2d8;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 /*possible colors
 35b4b3
 a6eceb

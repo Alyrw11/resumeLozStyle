@@ -73,12 +73,3 @@ body {
     font-family: 'HyliaSerif', cursive;
     cursor: pointer;
   }
-  
-  .questContinue {
-    color: #f5ad1f;
-    font-family: 'HyliaSerif', cursive;
-    text-decoration: none;
-    font-size: 1.2rem;
-    position: relative;
-    justify-items: center;
-  }
