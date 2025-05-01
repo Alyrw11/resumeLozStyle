@@ -1,6 +1,6 @@
 const itemPool = ["Boomerang", "Hookshot", "Bomb Bag", "Grappling Claw", "Magic Flute"];
 const masterItem = "Master Sword";
-const pages = ["work", "skills", "edcerts", "languages", "hobbies"];
+const pages = ["work", "expertise", "education", "languages", "pursuits"];
 const progress = JSON.parse(localStorage.getItem("zeldaProgress")) || {
   visited: [],
   items: [],
@@ -18,16 +18,16 @@ function toggleDetails(button) {
 
 function triggerBossFight(currentPage) {
   const miniBossElement = document.getElementById("miniBoss");
+  if (!miniBossElement) return;
   miniBossElement.classList.remove("hidden");
   miniBossElement.dataset.page = currentPage;
 
-  //Need to change the order of the miniBosses to match the pages
   const pageBossMap = {
     work: miniBosses[2],
-    skills: miniBosses[0],
-    edcerts: miniBosses[3],
+    expertise: miniBosses[0],
+    education: miniBosses[3],
     languages: miniBosses[1],
-    hobbies: miniBosses[4],
+    pursuits: miniBosses[4],
   };
 
   currentBoss = pageBossMap[currentPage] || miniBosses[Math.floor(Math.random() * miniBosses.length)];
@@ -47,10 +47,9 @@ function updateBattleUI() {
 }
 
 function playerAttack() {
-  let criticalHit = Math.random() < 0.2; // 20% chance
+  let criticalHit = Math.random() < 0.2;
   let baseDamage = Math.floor(Math.random() * 20) + 25;
   let playerDamage = criticalHit ? baseDamage * 2 : baseDamage;
-
   const bossDamage = Math.floor(Math.random() * 10) + 5;
 
   bossHealth -= playerDamage;
@@ -96,15 +95,12 @@ function playerHeal() {
 function checkBattleOutcome() {
   if (playerHealth <= 0) {
     alert("💀 You were defeated by " + currentBoss.name + "!");
-    location.reload(); // Restart the page
+    location.reload();
   } else if (bossHealth <= 0) {
-    if (currentBoss.name === "Calamity Ganon") {
+    if (currentBoss.name === "Demon Dragon Ganon") {
       alert("🏆 You have saved Hyrule and completed your quest!");
-
-      // Remove backdrop before leaving
       const backdrop = document.getElementById("bossBackdrop");
-      backdrop.classList.remove("active");
-
+      if (backdrop) backdrop.classList.remove("active");
       setTimeout(() => {
         window.location.href = "/html/contact.html";
       }, 500);
@@ -134,33 +130,28 @@ function defeatBoss() {
   document.getElementById("miniBoss").classList.add("hidden");
 
   if (progress.visited.length >= pages.length && !progress.masterUnlocked) {
-    triggerFinalBoss();
+    showMasterSwordPrompt();
   } else {
     chooseNextPage();
   }
 }
 
-function goToNextPage() {
-}
-
 function chooseNextPage() {
   const inputBox = document.getElementById("nextInputBox");
-  const carouselText = document.getElementById("carouselText");
-
   if (inputBox) {
     inputBox.classList.remove("hidden");
     window.scrollTo({ top: inputBox.offsetTop, behavior: 'smooth' });
   }
-  //  No need to inject a button — adventure.js already handles that!
 }
-
 
 function triggerFinalBoss() {
   const miniBossElement = document.getElementById("miniBoss");
+  if (!miniBossElement) return;
+
   miniBossElement.classList.remove("hidden");
 
   const backdrop = document.getElementById("bossBackdrop");
-  backdrop.classList.add("active");
+  if (backdrop) backdrop.classList.add("active");
 
   currentBoss = masterBoss;
   document.getElementById("bossName").textContent = masterBoss.name;
@@ -180,7 +171,6 @@ function playCriticalHitEffect() {
   const critText = document.getElementById("criticalText");
 
   miniBoss.classList.add("critical-hit");
-
   critText.classList.remove("hidden");
   critText.classList.add("float-crit");
 
@@ -189,4 +179,48 @@ function playCriticalHitEffect() {
     critText.classList.add("hidden");
     critText.classList.remove("float-crit");
   }, 1000);
+}
+
+// NEW: Prompt to retrieve Master Sword
+function showMasterSwordPrompt() {
+  const prompt = document.createElement("div");
+  prompt.id = "swordPrompt";
+  prompt.innerHTML = `
+    <p>✨ You feel a surge of power... It's time to retrieve the Master Sword!</p>
+    <button id="goToSword">⚔️ Go Retrieve the Master Sword</button>
+  `;
+  document.body.appendChild(prompt);
+
+  document.getElementById("goToSword").addEventListener("click", () => {
+    window.location.href = "/triforce.html"; // or triforce.html
+  });
+}
+
+// Load cutscene and post-cutscene options if redirected
+document.addEventListener("DOMContentLoaded", () => {
+  if (
+    window.location.pathname.includes("triforce.html") &&
+    localStorage.getItem("zeldaPlayCutscene") === "true"
+  ) {
+    localStorage.removeItem("zeldaPlayCutscene");
+    playMasterSwordCutscene();
+  }
+});
+
+//Cutscene function (optional fallback usage)
+function playMasterSwordCutscene() {
+  const container = document.createElement("div");
+  container.id = "cutsceneContainer";
+  document.body.appendChild(container);
+
+  const video = document.createElement("video");
+  video.src = "/videos/masterSword.mp4";
+  video.autoplay = true;
+  video.controls = true;
+
+  video.onended = () => {
+    triggerFinalBoss();
+  };
+
+  container.appendChild(video);
 }

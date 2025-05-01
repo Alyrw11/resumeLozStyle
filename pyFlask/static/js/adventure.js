@@ -4,16 +4,14 @@ const displayNames = {
   "education": "Education & Certifications",
   "languages": "Languages",
   "pursuits": "Hobbies & Interests",
-  "contact": "Contact Information",
 };
 
 const themedNames = {
-  "work": "Career Mountain", //Death Mountain
-  "expertise": "Proficiency Ranch", //Hateno Village or Lon lon Ranch
-  "education": "Knowledge Domain", //Zora's Domain
-  "languages": "Tongues Valley", //Gerudo Valley
-  "pursuits": "Leisure Village", //Kakariko Village or Rito Village
-  "contact": "Wright Castle", //Hyrule Castle
+  "work": "Career Mountain",
+  "expertise": "Proficiency Ranch",
+  "education": "Knowledge Domain",
+  "languages": "Tongues Valley",
+  "pursuits": "Leisure Village",
 };
 
 const adventurePages = {
@@ -22,41 +20,43 @@ const adventurePages = {
   "education": "/edCerts.html",
   "languages": "/languages.html",
   "pursuits": "/hobbies.html",
-  "contact": "/contact.html",
 };
 
-// Synonyms: user input → key used in adventurePages
 const inputSynonyms = {
-"Education & Certifications": "education",
-"Education and Certifications": "education",
-"Knowledge Domain": "education",
-"education": "education",
-"career mountain": "work",
-"work history": "work",
-"Skills and Attributes": "expertise",
-"Skills & Attributes": "expertise",
-"skills": "expertise",
-"expertise": "expertise",
-"proficiency Ranch": "expertise",
-"tongues valley": "languages",
-"temple of languages": "languages",
-"leisure village": "pursuits",
-"hobbies": "pursuits",
-"hobbies & Interests": "pursuits",
-"hobbies AND Interests": "pursuits",
-"final trial": "contact",
-"wright castle": "contact"
+  "education & certifications": "education",
+  "education and certifications": "education",
+  "knowledge domain": "education",
+  "education": "education",
+  "career mountain": "work",
+  "work history": "work",
+  "skills and attributes": "expertise",
+  "skills & attributes": "expertise",
+  "skills": "expertise",
+  "expertise": "expertise",
+  "proficiency ranch": "expertise",
+  "tongues valley": "languages",
+  "temple of languages": "languages",
+  "leisure village": "pursuits",
+  "hobbies": "pursuits",
+  "hobbies & interests": "pursuits",
+  "hobbies and interests": "pursuits",
 };
 
-let keys = Object.keys(displayNames);
+let allKeys = Object.keys(displayNames);
 let index = 0;
 
-function rotateCarousel() {
+// Filter out pages the user has already visited
+function getUnvisitedPages() {
+  const progress = JSON.parse(localStorage.getItem("zeldaProgress")) || { visited: [] };
+  return allKeys.filter(key => !progress.visited.includes(key));
+}
+
+function rotateCarousel(unvisitedKeys) {
   const display = document.getElementById("carouselText");
-  if (display) {
-    display.textContent = displayNames[keys[index]];
-    index = (index + 1) % keys.length;
-  }
+  if (!display || unvisitedKeys.length === 0) return;
+
+  display.textContent = displayNames[unvisitedKeys[index]];
+  index = (index + 1) % unvisitedKeys.length;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -64,32 +64,44 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("pathBtnContainer");
 
   if (!inputField || !container) {
-    console.warn("destinationInput or pathBtnContainer not found");
+    console.warn("Missing #destinationInput or #pathBtnContainer");
     return;
   }
 
-  // Start rotating display text
-setInterval(rotateCarousel, 2000);
+  const unvisitedKeys = getUnvisitedPages();
 
-["input", "change"].forEach(evt => {
-  inputField.addEventListener(evt, function () {
-    let val = this.value.trim().toLowerCase();
+  // If all pages visited → show Master Sword button
+  if (unvisitedKeys.length === 0) {
+    container.innerHTML = `
+      <button id="masterSwordBtn">⚔️ Retrieve the Master Sword</button>
+    `;
+    document.getElementById("masterSwordBtn").addEventListener("click", () => {
+      localStorage.setItem("zeldaPlayCutscene", "true");
+      window.location.href = "/html/triforce.html";
+    });
+    return;
+  }
 
-    // map synonyms to actual key
-    if (inputSynonyms[val]) {
-      val = inputSynonyms[val];
-    }
+  // Start rotating unvisited options in carousel
+  setInterval(() => rotateCarousel(unvisitedKeys), 2000);
 
-    if (adventurePages[val]) {
-      const themeName = themedNames[val] || displayNames[val] || val;
-      container.innerHTML = `
-        <p>You have chosen to go: <strong>${themeName}</strong></p>
-        <a href="${adventurePages[val]}" class="startBtn">Enter ${themeName}</a>
-        <div class="triforce"><div></div></div>
-      `;
-    } else {
-      container.innerHTML = '';
-    }
+  ["input", "change"].forEach(evt => {
+    inputField.addEventListener(evt, function () {
+      let val = this.value.trim().toLowerCase();
+      if (inputSynonyms[val]) {
+        val = inputSynonyms[val];
+      }
+
+      if (adventurePages[val] && unvisitedKeys.includes(val)) {
+        const themeName = themedNames[val] || displayNames[val];
+        container.innerHTML = `
+          <p>You have chosen to go: <strong>${themeName}</strong></p>
+          <a href="${adventurePages[val]}" class="startBtn">Enter ${themeName}</a>
+          <div class="triforce"><div></div></div>
+        `;
+      } else {
+        container.innerHTML = '';
+      }
+    });
   });
-});
 });
