@@ -183,6 +183,11 @@ footer img {
   opacity: 1;
 }
 
+.hidden {
+  display: none;
+  text-align: center; 
+  margin-top: 2em;
+}
 /*possible colors
 35b4b3
 a6eceb

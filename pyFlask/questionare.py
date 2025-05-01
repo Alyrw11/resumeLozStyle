@@ -40,3 +40,8 @@ def goto():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# === Boss Route ===
+@app.route('/bosses')
+def bosses():
+    return render_template('bosses.html')

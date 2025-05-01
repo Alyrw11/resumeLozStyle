@@ -1,17 +1,15 @@
-window.addEventListener('DOMContentLoaded', () => {
-  if (typeof miniBosses !== 'undefined') {
-    console.log('Mini Bosses loaded:', miniBosses);
+window.addEventListener('DOMContentLoaded', async () => {
+  const container = document.getElementById('bossContainer');
+  if (!container) return console.warn("No #bossContainer found on this page.");
 
-    // Create bossContainer if needed (this is optional, assuming HTML already has it)
-    const bossContainer = document.getElementById('bossContainer');
-    if (!bossContainer) {
-      const container = document.createElement('div');
-      container.id = 'bossContainer';
-      document.body.appendChild(container);
-    }
+  try {
+    const response = await fetch('/bosses');
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-    // Optionally you can pre-load anything visual here if needed
-  } else {
-    console.error('MiniBosses not loaded!');
+    const html = await response.text();
+    container.innerHTML = html;
+    console.log("Boss UI loaded from bosses.html");
+  } catch (err) {
+    console.error("Failed to load bosses.html:", err);
   }
 });

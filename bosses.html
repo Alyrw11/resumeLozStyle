@@ -8,8 +8,8 @@
   <p id="bossDesc"></p>
 
   <div id="battleStats">
-    <p>🧙‍♂️ Your HP: <span id="playerHP">100</span></p>
-    <p>👹 Boss HP: <span id="bossHP">100</span></p>
+    <p>Your HP: <span id="playerHP">100</span></p>
+    <p>Boss HP: <span id="bossHP">100</span></p>
   </div>
 
   <div id="battleActions">
@@ -17,4 +17,11 @@
     <button onclick="playerDodge()">Dodge 🛡️</button>
     <button onclick="playerHeal()">Heal 🍖</button>
   </div>
+</div>
+
+<!-- Next Page Input Section (shown after boss is defeated) -->
+<div id="nextPageInputContainer" class="hidden" style="margin-top: 20px;">
+  <label for="nextPage">Choose your next destination:</label>
+  <input type="text" id="nextPage" placeholder="e.g., skills, hobbies, triforce">
+  <button onclick="goToNextPage()">Go</button>
 </div>

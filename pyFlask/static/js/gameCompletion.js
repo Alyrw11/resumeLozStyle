@@ -23,10 +23,10 @@ function triggerBossFight(currentPage) {
 
   //Need to change the order of the miniBosses to match the pages
   const pageBossMap = {
-    work: miniBosses[0],
-    skills: miniBosses[1],
-    edcerts: miniBosses[2],
-    languages: miniBosses[3],
+    work: miniBosses[2],
+    skills: miniBosses[0],
+    edcerts: miniBosses[3],
+    languages: miniBosses[1],
     hobbies: miniBosses[4],
   };
 
@@ -140,10 +140,20 @@ function defeatBoss() {
   }
 }
 
-function chooseNextPage() {
-  const next = prompt("Where would you like to go next? (skills, edcerts, languages, hobbies)");
-  if (next) window.location.href = `/html/${next}.html`;
+function goToNextPage() {
 }
+
+function chooseNextPage() {
+  const inputBox = document.getElementById("nextInputBox");
+  const carouselText = document.getElementById("carouselText");
+
+  if (inputBox) {
+    inputBox.classList.remove("hidden");
+    window.scrollTo({ top: inputBox.offsetTop, behavior: 'smooth' });
+  }
+  //  No need to inject a button — adventure.js already handles that!
+}
+
 
 function triggerFinalBoss() {
   const miniBossElement = document.getElementById("miniBoss");

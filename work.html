@@ -107,6 +107,7 @@
         </div>
     </div>-->
   </div>
+
   <div id="bossContainer"></div>
   <!-- Quest Button -->
   <button class="bossBtn" onclick="triggerBossFight('work')">Continue Your Quest</button>
@@ -115,5 +116,18 @@
   <script src="/pyFlask/static/js/bossFight.js"></script>
   <script src="/pyFlask/static/js/gameCompletion.js"></script>
   <script src="/pyFlask/static/js/background.js"></script>
+  <script src="/pyFlask/static/js/adventure.js"></script>
+
+  <!-- Next Page Selection -->
+
+  <div class="questContinue">
+    <div id="nextInputBox" class="hidden">
+      <div id="carouselText" style="margin: 1em 0; font-style: italic; color: #fdf6e3;"></div>
+      <p>Where would should you travel next</p>
+      <input type="text" id="destinationInput" placeholder="Type a section..." 
+           style="padding: 10px; width: 60%; max-width: 300px; font-family: 'Press Start 2P', cursive; border: 2px solid white; background-color: #333; color: #fdf6e3; text-align: center;">
+      <div id="pathBtnContainer"></div>
+    </div>
+  </div>
 </body>
 </html>

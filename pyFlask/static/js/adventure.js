@@ -1,27 +1,27 @@
 const displayNames = {
     "work": "Work History",
-    "expertise": "Skills & Attributes",
+    "skills": "Skills & Attributes",
     "education": "Education & Certifications",
     "languages": "Languages",
-    "pursuits": "Hobbies & Interests",
+    "hobbies": "Hobbies & Interests",
     "contact": "Contact Information",
   };
   
   const themedNames = {
-    "work": "Career Mountain", //Death Mountain
-    "expertise": "Proficiency Ranch", //Hateno Village or Lon lon Ranch
-    "education": "Knowledge Domain", //Zora's Domain
-    "languages": "Tongues Valley", //Gerudo Valley
-    "pursuits": "Leisure Village", //Kakariko Village or Rito Village
-    "contact": "Wright Castle", //Hyrule Castle
+    "work": "Temple of Career Experience",
+    "skills": "Skill Canyon",
+    "education": "Knowledge Domain",
+    "languages": "Tongues Valley",
+    "hobbies": "Hobbie Village",
+    "contact": "Wright Castle",
   };
   
   const pages = {
     "work": "/work.html",
-    "expertise": "/skills.html",
+    "skills": "/skills.html",
     "education": "/edCerts.html",
     "languages": "/languages.html",
-    "pursuits": "/hobbies.html",
+    "hobbies": "/hobbies.html",
     "contact": "/contact.html",
   };
   
