@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: url('/pyFlask/static/images/dmDay.png') no-repeat center center fixed;
-  background-size: cover;
+  background: url('/pyFlask/static/images/deathMnt.png') no-repeat center center fixed;
+  background-size: 100% 100%;
   background-color: #000; /* Fallback for older browsers */
 }
 
@@ -15,7 +15,7 @@ body {
   }
   
   .jobCard {
-    background-color: #6e3810 (0, 0 , 0, .8);
+    background-color: #6e3910aa;
     border: 2px solid #a33006;
     border-radius: 12px;
     padding: 1.5rem;
@@ -64,6 +64,7 @@ body {
   
   .bossBtn {
     margin-top: 2rem;
+    margin-left: 30px;
     background-color: #ea4601;
     color: #fda41d;
     padding: 12px 20px;
