@@ -35,6 +35,8 @@ const inputSynonyms = {
   "expertise": "expertise",
   "proficiency ranch": "expertise",
   "tongues valley": "languages",
+  "languages": "languages",
+  "lang": "languages",
   "temple of languages": "languages",
   "leisure village": "pursuits",
   "hobbies": "pursuits",
