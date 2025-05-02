@@ -186,7 +186,7 @@ function showMasterSwordPrompt() {
   const prompt = document.createElement("div");
   prompt.id = "swordPrompt";
   prompt.innerHTML = `
-    <p>✨ You feel a surge of power... It's time to retrieve the Master Sword!</p>
+    <p>✨ You hear a voice saying... It's time to retrieve the Master Sword!</p>
     <button id="goToSword">⚔️ Go Retrieve the Master Sword</button>
   `;
   document.body.appendChild(prompt);
