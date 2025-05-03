@@ -4,6 +4,7 @@ const displayNames = {
   "education": "Education & Certifications",
   "languages": "Languages",
   "pursuits": "Hobbies & Interests",
+  "contact": "Contact Information",
 };
 
 const themedNames = {
@@ -12,6 +13,7 @@ const themedNames = {
   "education": "Knowledge Domain",
   "languages": "Tongues Valley",
   "pursuits": "Leisure Village",
+  "contact": "Wright Castle",
 };
 
 const adventurePages = {
@@ -20,6 +22,7 @@ const adventurePages = {
   "education": "/edCerts.html",
   "languages": "/languages.html",
   "pursuits": "/hobbies.html",
+  "contact": "/contact.html",
 };
 
 const inputSynonyms = {
@@ -42,6 +45,8 @@ const inputSynonyms = {
   "hobbies": "pursuits",
   "hobbies & interests": "pursuits",
   "hobbies and interests": "pursuits",
+  "wright castle": "contact",
+  "wright": "contact",
 };
 
 let allKeys = Object.keys(displayNames);
