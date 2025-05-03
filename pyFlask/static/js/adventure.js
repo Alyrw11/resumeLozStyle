@@ -1,3 +1,4 @@
+// Reset disclaimer when user returns to index.html
 if (window.location.pathname.endsWith("/index.html") || window.location.pathname === "/") {
   localStorage.removeItem("disclaimerAccepted");
 }
@@ -64,7 +65,6 @@ function getUnvisitedPages() {
 function rotateCarousel(unvisitedKeys) {
   const display = document.getElementById("carouselText");
   if (!display || unvisitedKeys.length === 0) return;
-
   display.textContent = displayNames[unvisitedKeys[index]];
   index = (index + 1) % unvisitedKeys.length;
 }
@@ -106,47 +106,52 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="triforce"><div></div></div>
         `;
 
-        // Show disclaimer only if not yet accepted
-        document.getElementById("disclaimerTriggerBtn").addEventListener("click", () => {
-          if (!localStorage.getItem("disclaimerAccepted")) {
-            const popup = document.createElement('div');
-            popup.id = 'disclaimer-popup';
-            popup.style = `
-              position: fixed;
-              top: 0; left: 0; width: 100%; height: 100%;
-              background: rgba(0, 0, 0, 0.85);
-              color: #fff;
-              font-family: 'Press Start 2P', cursive;
-              z-index: 1000;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              text-align: center;
-              padding: 2rem;
-            `;
-            popup.innerHTML = `
-              <div>
-                <p style="max-width: 400px;">⚠️ This site is currently under construction. You may encounter bugs or unfinished features. Continue your quest?</p>
-                <button id="continueQuestBtn" style="margin-top: 1rem; padding: 10px; font-size: 12px;">Continue</button>
-              </div>
-            `;
-            document.body.appendChild(popup);
+        // Delay attachment of click listener until DOM updates
+        setTimeout(() => {
+          const triggerBtn = document.getElementById("disclaimerTriggerBtn");
+          if (!triggerBtn) return;
 
-            document.getElementById("continueQuestBtn").addEventListener("click", () => {
-              localStorage.setItem("disclaimerAccepted", "true");
+          triggerBtn.addEventListener("click", () => {
+            if (!localStorage.getItem("disclaimerAccepted")) {
+              const popup = document.createElement('div');
+              popup.id = 'disclaimer-popup';
+              popup.style = `
+                position: fixed;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0, 0, 0, 0.85);
+                color: #fff;
+                font-family: 'Press Start 2P', cursive;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 2rem;
+              `;
+              popup.innerHTML = `
+                <div>
+                  <p style="max-width: 400px;">⚠️ This site is currently under construction. You may encounter bugs or unfinished features. Continue your quest?</p>
+                  <button id="continueQuestBtn" style="margin-top: 1rem; padding: 10px; font-size: 12px;">Continue</button>
+                </div>
+              `;
+              document.body.appendChild(popup);
+
+              document.getElementById("continueQuestBtn").addEventListener("click", () => {
+                localStorage.setItem("disclaimerAccepted", "true");
+                window.location.href = adventurePages[val];
+              });
+            } else {
               window.location.href = adventurePages[val];
-            });
-          } else {
-            window.location.href = adventurePages[val];
-          }
-        });
+            }
+          });
+        }, 0);
       } else {
         container.innerHTML = '';
       }
     });
   });
 
-  // Restart quest logic
+  // Restart Quest logic
   const restartBtn = document.getElementById("restartQuestBtn");
   if (restartBtn) {
     restartBtn.addEventListener("click", () => {
