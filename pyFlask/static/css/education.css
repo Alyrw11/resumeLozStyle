@@ -62,3 +62,21 @@ body {
       color: #026d94;
       box-shadow: 0 0 10px #026d94;
   }
+    .startBtn {
+      margin-top: 2rem;
+      margin-left: 30px;
+      background-color: #026d94;
+      border: 2px solid #014d6a;
+      color: #76afb0;
+      box-shadow: 0 0 10px #014d6a;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-family: 'HyliaSerif', cursive;
+      cursor: pointer;
+  }
+  .startBtn:hover {
+      background-color: #76afb0;
+      color: #026d94;
+      box-shadow: 0 0 10px #026d94;
+  }

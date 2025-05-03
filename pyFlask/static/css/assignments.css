@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('/pyFlask/static/images/map.png') no-repeat center center fixed;
+    background-size: 100% 100%;
+    background-color: #000; /* Fallback for older browsers */
+  }
+  
+    .classGrid {
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .assignContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 2em auto;
+        max-width: 90%;
+        border-top: 2px solid white;
+        padding-top: 2em;
+    }
+    
+    .assignList {
+        width: 30%;
+        text-align: left;
+  }
+  
+    .assignList ul {
+        list-style: none;
+        padding: 0;
+  }
+  
+    .assignList li {
+        margin-bottom: 1em;
+  }
+  
+    .assignList a {
+        color: #e2d38b;
+        cursor: pointer;
+        display: inline-block;
+  }
+  
+    .assignmentContent {
+        width: 65%;
+        background-color: #47734a8c;
+        padding: 1em;
+        border: 1px solid #e2d38b;
+        border-radius: 8px;
+        text-align: left;
+  }
+    
+    .classCard {
+        background-color: #6e3910aa;
+        border: 2px solid #a33006;
+        border-radius: 12px;
+        padding: 1.5rem;
+        color: #f5ad1f;
+        box-shadow: 0 0 10px #ff6a00;
+        transition: transform 0.3s ease;
+    }
+    
+    .classCard:hover {
+        transform: scale(1.02);
+    }
+    
+    .classLogo {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+    
+    .classMeta {
+        font-size: 0.9rem;
+        color: #eb7d0f;
+    }
+    
+    .classSummary {
+        margin: 0.5rem 0;
+    }
+    
+    .expandBtn {
+        background-color: #872e07;
+        color: #eb7d0f;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: 'HyliaSerif', cursive;
+    }
+    
+    .bossBtn {
+        margin-top: 2rem;
+        margin-left: 30px;
+        background-color: #ea4601;
+        color: #fda41d;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        font-family: 'HyliaSerif', cursive;
+        cursor: pointer;
+    }
+  
+    .bossBtn:hover {
+        background-color: #fda41d;
+        color: #ea4601;
+        box-shadow: 0 0 10px #ea4601;
+  }
