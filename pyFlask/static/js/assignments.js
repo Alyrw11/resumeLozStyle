@@ -15,7 +15,7 @@ function toggleDetails(button) {
       "Peace101 Week1": `
         <h3>What Conflict & Peace Mean to Me</h3>
         <p>Placeholder for thoughts.</p>
-      `,
+      `, //
       "Peace101 Week2": `
         <h3>Conflict Views & Styles</h3>
         <p>Placeholder for thoughts.</p>
