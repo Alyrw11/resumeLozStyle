@@ -79,6 +79,10 @@ body {
     .classSummary {
         margin: 0.5rem 0;
     }
+
+    .assignSection {
+        display: none;
+      }
     
     .expandBtn {
         background-color: #872e07;

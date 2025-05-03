@@ -1,4 +1,16 @@
-function loadAssignment(id) {
+// Toggle visibility of the assignment section
+function toggleDetails(button) {
+    const section = button.nextElementSibling;
+    if (!section) return;
+  
+    const isHidden = section.style.display === "none" || section.style.display === "";
+  
+    section.style.display = isHidden ? "block" : "none";
+    button.textContent = isHidden ? "Hide Details" : "More Details";
+  }
+  
+  // Load assignment content into the right panel
+  function loadAssignment(id) {
     const assignments = {
       "Peace101 Week1": `
         <h3>What Conflict & Peace Mean to Me</h3>
@@ -21,15 +33,18 @@ function loadAssignment(id) {
         <p>Placeholder for thoughts.</p>
       `,
       "Peace101 Week6": `
-        <h3>Community Conflict Analysis/h3>
-        <p>Placeholder for thoughts.</p> 
-     `,
+        <h3>Community Conflict Analysis</h3>
+        <p>Placeholder for thoughts.</p>
+      `,
       "Peace101 Week7": `
         <h3>What Conflict & Peace Now Mean to Me</h3>
         <p>Placeholder for thoughts.</p>
       `,
     };
   
-    document.getElementById("assignmentContent").innerHTML = assignments[id] || "<p>Assignment not found.</p>";
-  } 
+    const contentDiv = document.getElementById("assignmentContent");
+    if (contentDiv) {
+      contentDiv.innerHTML = assignments[id] || "<p>Assignment not found.</p>";
+    }
+  }
   
