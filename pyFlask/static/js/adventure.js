@@ -146,11 +146,7 @@ container.innerHTML = '';
 const restartBtn = document.getElementById("restartQuestBtn");
 if (restartBtn) {
 restartBtn.addEventListener("click", () => {
-sessionStorage.setItem("restartClicked", "true");
 window.location.href = "/index.html";
 });
 }
 });
-
-
-
