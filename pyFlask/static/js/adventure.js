@@ -1,3 +1,7 @@
+if (window.location.pathname.endsWith("/index.html") || window.location.pathname === "/") {
+  localStorage.removeItem("disclaimerAccepted");
+}
+
 const displayNames = {
   "work": "Work History",
   "expertise": "Skills & Attributes",
