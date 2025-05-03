@@ -6,7 +6,7 @@ function toggleDetails(button) {
     const isHidden = section.style.display === "none" || section.style.display === "";
   
     section.style.display = isHidden ? "block" : "none";
-    button.textContent = isHidden ? "Hide Details" : "More Details";
+    button.textContent = isHidden ? "Hide Assignments" : "Read Assignments";
   }
   
   // Load assignment content into the right panel
