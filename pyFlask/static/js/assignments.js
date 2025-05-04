@@ -25,7 +25,7 @@ function toggleDetails(button) {
         <p>To break the impasse, I approached the problem from a new angle. The client wanted users to receive a clear explanation when a payment failed. Our system only returned numeric error codes. My solution was to display the code to the user and provide an option to connect with a live agent. Agents would have a reference list of error codes and their meanings, enabling them to offer personalized support.</p>
         <p>The client accepted this solution, and we were able to complete the enhancement successfully. By shifting perspectives and focusing on shared goals, we transformed a conflict into a peaceful resolution. This professional experience helped me whenever conflict arise in other projects. It help me find a new way to keep the peace and be successful in my role.</p>
       `, // week 1.2 Assginment
-      "Peace101 Week1.5": `
+      "Peace101 Week1_5": `
         <h3>Overcoming Our Fear of Conflict</h3>
         <p>During my time at a growing company, I experienced a pivotal moment that shaped my development as a team leader and collaborator. As an Account Manager, I faced ongoing challenges working cross-functionally with our Support Engineering (SE) team. Communication gaps and misaligned expectations were creating friction between teams. To address the issue constructively, a peer and I organized a meeting exclusively for the Account Management team. Our goal was to identify shared patterns in our experiences, consolidate recurring challenges, and draft a list of thoughtful, solution-oriented recommendations to present to the SE leadership.</p>
         <H4>Conflict Cycle: Demarcation and Encroachment</H4>
