@@ -53,12 +53,12 @@ body {
   }
     
     .classCard {
-        background-color: #6e3910aa;
-        border: 2px solid #a33006;
+        background-color: #593e097e;
+        border: 2px solid #483206;
         border-radius: 12px;
         padding: 1.5rem;
-        color: #f5ad1f;
-        box-shadow: 0 0 10px #ff6a00;
+        color: #feeeac;
+        box-shadow: 0 0 10px #777025;
         transition: transform 0.3s ease;
     }
     
@@ -73,7 +73,7 @@ body {
     
     .classMeta {
         font-size: 0.9rem;
-        color: #eb7d0f;
+        color: #99aa9a;
     }
     
     .classSummary {
@@ -85,8 +85,8 @@ body {
       }
     
     .expandBtn {
-        background-color: #872e07;
-        color: #eb7d0f;
+        background-color: #593f09;
+        color: #cec37e;
         border: none;
         padding: 8px 12px;
         border-radius: 8px;
@@ -97,8 +97,8 @@ body {
     .bossBtn {
         margin-top: 2rem;
         margin-left: 30px;
-        background-color: #ea4601;
-        color: #fda41d;
+        background-color: #593f09;
+        color: #cec37e;
         padding: 12px 20px;
         border: none;
         border-radius: 10px;
@@ -107,7 +107,25 @@ body {
     }
   
     .bossBtn:hover {
-        background-color: #fda41d;
-        color: #ea4601;
-        box-shadow: 0 0 10px #ea4601;
+        background-color: #cec37e;
+        color: #593f09;
+        box-shadow: 0 0 10px #593f09;
   }
+
+    .startBtn {
+    margin-top: 2rem;
+    margin-left: 30px;
+    background-color: #593f09;
+    color: #cec37e;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'HyliaSerif', cursive;
+    cursor: pointer;
+}
+
+    .startBtn:hover {
+    background-color: #cec37e;
+    color: #593f09;
+    box-shadow: 0 0 10px #593f09;
+}
